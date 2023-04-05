@@ -42,12 +42,14 @@ class QuoteMachine extends React.Component {
   }
 
   render() {
+    const link = 'https://twitter.com/intent/tweet?hashtags=quotes&text=%20"' + this.state.quoteList[this.state.quoteNumber].quote.split(' ').join("%20") + '"%20' + this.state.quoteList[this.state.quoteNumber].author + "%20";
+
     return (
       <div>
         <div id="quote-box">
           <p id="text">{this.state.quoteList[this.state.quoteNumber].quote}</p>
           <p id="author">{this.state.quoteList[this.state.quoteNumber].author}</p>
-          <a href="#" id="tweet-quote">Tweet</a>
+          <a href={link} target='_blank' id="tweet-quote">Tweet</a>
           <button id="new-quote" onClick={this.newQuote}>New quote</button>
         </div>
       </div>
