@@ -17,7 +17,5 @@ Displays a quote and its author on the screen.
 
 ## Pending Tasks
 
-- Add styling
-- Prevent same quote from showing up consecutively
-- Add more quotes
+- Add transition animations
 - Use state management tools like Redux
