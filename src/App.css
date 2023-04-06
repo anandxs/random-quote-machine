@@ -1,8 +1,16 @@
+#root {
+  background-color: black;
+  height: 100vh;
+  padding: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #wrapper {
   background-color: orange;
   width: 540px;
   padding: 20px;
-  margin: auto;
 }
 
 #text {
