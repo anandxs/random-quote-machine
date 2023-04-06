@@ -1,35 +1,41 @@
+:root {
+  --color-1: red;
+}
+
 #root {
-  background-color: black;
+  background-color: var(--color-1);
   height: 100vh;
   padding: 1px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
 }
 
 #wrapper {
-  background-color: orange;
+  background-color: #fff;
   width: 540px;
   padding: 20px;
 }
 
 #text {
+  color: var(--color-1);
   text-align: center;
-  color: #fff;
 }
 
 #author {
+  color: var(--color-1);
   text-align: right;
-  color: #fff;
 }
 
 #buttons {
   display: flex;
   justify-content: space-between;
+  padding: 10px;
 }
 
 #tweet-quote {
   text-decoration: none;
+  color: var(--color-1);
 }
 
 #tweet-qutoe:visited {
@@ -38,7 +44,7 @@
 
 #new-quote {
   color: #fff;
-  background-color: green;
+  background-color: var(--color-1);
   border-radius: 3px;
 }
 
