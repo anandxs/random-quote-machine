@@ -101,9 +101,15 @@ class QuoteMachine extends React.Component {
   // quoteNumber = Math.floor(Math.random() * quoteList.length);
 
   newQuote = () => {
-    this.setState({
-      quoteNumber: Math.floor(Math.random() * 4)
-    });
+    this.setState(prevState => {
+      let tempQuoteNumber = Math.floor(Math.random() * 20);
+      while(tempQuoteNumber == prevState.quoteNumber) {
+        tempQuoteNumber = Math.floor(Math.random() * 20);
+      }
+      return {
+        quoteNumber: tempQuoteNumber
+      }
+    })
   }
 
   render() {
