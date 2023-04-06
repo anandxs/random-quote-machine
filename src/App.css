@@ -1,6 +1,37 @@
 #wrapper {
+  background-color: orange;
+  width: 540px;
+  padding: 20px;
+  margin: auto;
+}
+
+#text {
+  text-align: center;
+  color: #fff;
+}
+
+#author {
+  text-align: right;
+  color: #fff;
+}
+
+#buttons {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+#tweet-quote {
+  text-decoration: none;
+}
+
+#tweet-qutoe:visited {
+  color: inherit;
+}
+
+#new-quote {
+  color: #fff;
+  background-color: green;
+  border-radius: 3px;
 }
 
 /* default styling
