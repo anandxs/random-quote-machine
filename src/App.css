@@ -11,6 +11,22 @@
   align-items: center;  
 }
 
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+#contact-section {
+  color: #fff;
+}
+
+ #contact {
+  color: #fff;
+  text-decoration: none;
+ }
+
 #wrapper {
   background-color: #fff;
   width: 540px;

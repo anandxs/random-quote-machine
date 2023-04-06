@@ -3,7 +3,12 @@ import './App.css';
 
 function App() {
   return (
-    <QuoteMachine />
+    <div id='main'>
+      <QuoteMachine />
+      <div id='contact-section'>
+        by <a id='contact' href='https://github.com/anandxs' target='_blank'>Anand S</a>
+      </div>
+    </div>
   );
 }
 
