@@ -99,10 +99,10 @@ class QuoteMachine extends React.Component {
         '#FF0000',
         '#FF0000',
         '#008000',
-        'yellow',
+        '#bfc213',
         '#FFA500',
-        'pink',
-        'cyan',
+        '#c913d6',
+        '#1cc9b8',
         '#808080',
         '#9ACD32',
         '#A52A2A'
