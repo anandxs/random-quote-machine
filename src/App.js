@@ -94,13 +94,27 @@ class QuoteMachine extends React.Component {
           author: '- Norman Vincent Peale'
         }
       ],
-      quoteNumber: Math.floor(Math.random() * 4)
+      quoteNumber: Math.floor(Math.random() * 4),
+      colors: [
+        '#FF0000',
+        '#FF0000',
+        '#008000',
+        'yellow',
+        '#FFA500',
+        'pink',
+        'cyan',
+        '#808080',
+        '#9ACD32',
+        '#A52A2A'
+      ],
+      colorNumber: Math.floor(Math.random() * 10)
     }
   }
 
   // quoteNumber = Math.floor(Math.random() * quoteList.length);
 
   newQuote = () => {
+    this.changeStyle();
     this.setState(prevState => {
       let tempQuoteNumber = Math.floor(Math.random() * 20);
       while(tempQuoteNumber == prevState.quoteNumber) {
@@ -110,6 +124,19 @@ class QuoteMachine extends React.Component {
         quoteNumber: tempQuoteNumber
       }
     })
+  }
+
+  changeStyle = () => {
+    this.setState(prevState => {
+      let tempColorNumber = Math.floor(Math.random() * 10);
+      while(tempColorNumber === prevState.colorNumber) {
+        tempColorNumber = Math.floor(Math.random() * 10);
+      }
+      return {
+        colorNumber: tempColorNumber
+      }
+    });
+    document.documentElement.style.setProperty('--color-1', this.state.colors[this.state.colorNumber]);
   }
 
   render() {
