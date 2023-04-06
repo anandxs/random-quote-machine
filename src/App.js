@@ -145,10 +145,10 @@ class QuoteMachine extends React.Component {
     return (
       <div id="wrapper">
         <div id="quote-box">
-          <p id="text">{this.state.quoteList[this.state.quoteNumber].quote}</p>
+          <p id="text"><i className='fa fa-quote-left'></i>{` ${this.state.quoteList[this.state.quoteNumber].quote}`}</p>
           <p id="author">{this.state.quoteList[this.state.quoteNumber].author}</p>
           <div id="buttons">
-            <a href={link} target='_blank' id="tweet-quote"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href={link} target='_blank' id="tweet-quote"><i className="fa-brands fa-square-twitter"></i></a>
             <button id="new-quote" onClick={this.newQuote}>New quote</button>
           </div>
         </div>
