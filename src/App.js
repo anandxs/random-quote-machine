@@ -116,13 +116,11 @@ class QuoteMachine extends React.Component {
     }
   }
 
-  // quoteNumber = Math.floor(Math.random() * quoteList.length);
-
   newQuote = () => {
     this.changeStyle();
     this.setState(prevState => {
       let tempQuoteNumber = Math.floor(Math.random() * 20);
-      while(tempQuoteNumber == prevState.quoteNumber) {
+      while(tempQuoteNumber === prevState.quoteNumber) {
         tempQuoteNumber = Math.floor(Math.random() * 20);
       }
       return {
@@ -145,7 +143,7 @@ class QuoteMachine extends React.Component {
   }
 
   render() {
-    const link = 'https://twitter.com/intent/tweet?hashtags=quotes&text=%20"' + this.state.quoteList[this.state.quoteNumber].quote.split(' ').join("%20") + '"%20' + this.state.quoteList[this.state.quoteNumber].author + "%20";
+    const link = `https://twitter.com/intent/tweet?hashtags=quotes&text=%20${this.state.quoteList[this.state.quoteNumber].quote.split(' ').join("%20")}"%20${this.state.quoteList[this.state.quoteNumber].author}%20`;
 
     return (
       <div id="wrapper">
