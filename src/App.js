@@ -112,21 +112,28 @@ class QuoteMachine extends React.Component {
         '#9ACD32',
         '#A52A2A'
       ],
-      colorNumber: Math.floor(Math.random() * 10)
+      colorNumber: Math.floor(Math.random() * 10),
+      animationClass: 'fade-in'
     }
   }
 
   newQuote = () => {
-    this.changeStyle();
-    this.setState(prevState => {
-      let tempQuoteNumber = Math.floor(Math.random() * 20);
-      while(tempQuoteNumber === prevState.quoteNumber) {
-        tempQuoteNumber = Math.floor(Math.random() * 20);
-      }
-      return {
-        quoteNumber: tempQuoteNumber
-      }
+    this.setState({
+      animationClass: 'fade-out'
     })
+    setTimeout(() => {
+      this.changeStyle();
+      this.setState(prevState => {
+        let tempQuoteNumber = Math.floor(Math.random() * 20);
+        while(tempQuoteNumber === prevState.quoteNumber) {
+          tempQuoteNumber = Math.floor(Math.random() * 20);
+        }
+        return {
+          animationClass: 'fade-in',
+          quoteNumber: tempQuoteNumber
+        };
+      });
+    }, 1000);
   }
 
   changeStyle = () => {
@@ -148,8 +155,8 @@ class QuoteMachine extends React.Component {
     return (
       <div id="wrapper">
         <div id="quote-box">
-          <p id="text"><i className='fa fa-quote-left'></i>{` ${this.state.quoteList[this.state.quoteNumber].quote}`}</p>
-          <p id="author">{this.state.quoteList[this.state.quoteNumber].author}</p>
+          <p className={this.state.animationClass} id="text"><i className='fa fa-quote-left'></i>{` ${this.state.quoteList[this.state.quoteNumber].quote}`}</p>
+          <p className={this.state.animationClass} id="author">{this.state.quoteList[this.state.quoteNumber].author}</p>
           <div id="buttons">
             <a href={link} target='_blank' id="tweet-quote"><i className="fa-brands fa-square-twitter"></i></a>
             <button id="new-quote" onClick={this.newQuote}>New quote</button>
