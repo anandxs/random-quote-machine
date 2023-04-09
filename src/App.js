@@ -3,12 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <div id='main'>
-      <QuoteMachine />
-      <div id='contact-section'>
-        by <a id='contact' href='https://github.com/anandxs' target='_blank'>Anand S</a>
-      </div>
-    </div>
+    <QuoteMachine />
   );
 }
 
@@ -161,6 +156,9 @@ class QuoteMachine extends React.Component {
             <a href={link} target='_blank' id="tweet-quote"><i className="fa-brands fa-square-twitter"></i></a>
             <button id="new-quote" onClick={this.newQuote}>New quote</button>
           </div>
+        </div>
+        <div id='contact-section'>
+          by <a id='contact' href='https://github.com/anandxs' target='_blank'>Anand S</a>
         </div>
       </div>
     );
