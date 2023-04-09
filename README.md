@@ -4,6 +4,8 @@
 
 Displays a quote and its author on the screen.
 
+- Project hosted at https://random-quote-machine-anandxs.vercel.app/
+
 ## Installation
 
 - Clone the repository
@@ -17,5 +19,4 @@ Displays a quote and its author on the screen.
 
 ## Pending Tasks
 
-- Add transition animations
 - Use state management tools like Redux
